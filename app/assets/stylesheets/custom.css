@@ -1,3 +1,5 @@
+/* table styling start */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -25,6 +27,9 @@ h1 {
     color: #333;
 }
 
+/* table styling end */
+
+/* col header icons */
 .sort-asc::after {
     content: " ▲";
 }
@@ -33,6 +38,8 @@ h1 {
     content: " ▼";
 }
 
+
+/* table buttons start */
 .button {
     display:inline-block;
     padding: 8px 12px;
@@ -65,4 +72,43 @@ h1 {
 
 .button-destroy:hover {
     background-color: #da190b;
+}
+
+/* table buttons end */
+
+/* new page start */
+
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-container h1 {
+    text-align: center;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container form .field {
+    margin-bottom: 15px;
+  }
+  
+  /* new page end */
+
+  /* new movie button */
+
+.button-new-movie {
+    background-color: #7f6fd0;
+}
+
+.button-new-movie:hover {
+    background-color: #6b5cbf;
 }
