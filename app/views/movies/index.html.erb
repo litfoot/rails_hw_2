@@ -1,18 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Movies" %>
-
-<h1>Movies</h1>
+<h1>All Movies</h1>
 
 <table>
-  <thread>
+  <thead>
     <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
+      <th><%= sortable 'title', 'Title' %></th>
+      <th><%= sortable 'rating', 'Rating' %></th>
+      <th><%= sortable 'release_date', 'Release Date' %></th>
       <th>Actions</th>
     </tr>
-  </thread>
+  </thead>
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
@@ -21,7 +17,8 @@
         <td><%= movie.release_date %></td>
         <td>
           <%= link_to 'Show', movie_path(movie) %>
-          
+          <%= link_to 'Edit', edit_movie_path(movie) %>
+          <%= link_to 'Destroy', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
@@ -33,4 +30,4 @@
   </tfoot>
 </table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to 'Add new movie', new_movie_path %>
