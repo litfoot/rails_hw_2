@@ -16,10 +16,10 @@
         <td><%= movie.rating %></td>
         <td><%= movie.release_date ? movie.release_date.strftime("%d-%b-%Y") : 'N/A' %></td>
         <td>
-          <%= link_to 'Show', movie_path(movie) %>
-          <%= link_to 'Edit', edit_movie_path(movie) %>
-          <%= link_to 'Destroy', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
+        <%= link_to 'Show', movie_path(movie), class: 'button' %>
+        <%= link_to 'Edit', edit_movie_path(movie), class: 'button button-edit' %>
+        <%= link_to 'Destroy', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button-destroy' %>
+      </td>
       </tr>
     <% end %>
   </tbody>

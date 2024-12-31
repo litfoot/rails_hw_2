@@ -1,34 +1,68 @@
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th, td {
-  border: 1px solid #241d1d;
-  padding: 8px;
+    border: 1px solid #241d1d;
+    padding: 8px;
 }
 
 th {
-  background-color: #e7e1e1;
-  text-align: left;
+    background-color: #e7e1e1;
+    text-align: left;
 }
 
 tr:nth-child(even) {
-  background-color: #c5cab9;
+    background-color: #c5cab9;
 }
 
 tr:hover {
-  background-color: #bcb5de;
+    background-color: #bcb5de;
 }
 
 h1 {
-  color: #333;
+    color: #333;
 }
 
 .sort-asc::after {
     content: " ▲";
-  }
+}
   
-  .sort-desc::after {
+.sort-desc::after {
     content: " ▼";
-  }
+}
+
+.button {
+    display:inline-block;
+    padding: 8px 12px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.button-edit {
+    background-color: #008CBA;
+}
+
+.button-edit:hover {
+    background-color: #0077A3;
+}
+
+.button-destroy {
+    background-color: #f44336;
+}
+
+.button-destroy:hover {
+    background-color: #da190b;
+}
