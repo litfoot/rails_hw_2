@@ -3,8 +3,7 @@
 <%= render @movie %>
 
 <div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
-  <%= link_to "Back to movies", movies_path %>
-
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
+  <%= link_to "Edit this movie", edit_movie_path(@movie), class: "button button-edit" %>
+  <%= link_to "Back to movies", movies_path, class: "button" %>
+  <%= button_to "Destroy this movie", @movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "button button-destroy" %>
 </div>
