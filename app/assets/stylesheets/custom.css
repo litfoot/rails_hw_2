@@ -24,3 +24,11 @@ tr:hover {
 h1 {
   color: #333;
 }
+
+.sort-asc::after {
+    content: " ▲";
+  }
+  
+  .sort-desc::after {
+    content: " ▼";
+  }
