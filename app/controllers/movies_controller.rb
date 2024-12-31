@@ -5,13 +5,13 @@ class MoviesController < ApplicationController
   def index
     # @movies = Movie.all
     # going to sort the movies here,
-      # need to know what the user wants to sort by
-          #  there is col and order
+    # need to know what the user wants to sort by
+    #  there is col and order
     session[:sort] = params[:sort] if params[:sort]
     session[:direction] = params[:direction] if params[:direction]
-      
-    sort_column = session[:sort] || 'title'
-    sort_order = session[:direction] || 'asc'
+
+    sort_column = session[:sort] || "title"
+    sort_order = session[:direction] || "asc"
     @movies = Movie.order("#{sort_column} #{sort_order}")
   end
 
