@@ -13,7 +13,6 @@ class MoviesController < ApplicationController
     sort_column = session[:sort] || 'title'
     sort_order = session[:direction] || 'asc'
     @movies = Movie.order("#{sort_column} #{sort_order}")
-    end
   end
 
   # GET /movies/1 or /movies/1.json
