@@ -14,7 +14,10 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.rating %></td>
-        <td><%= movie.release_date %></td>
+        # <td><%= movie.release_date %></td>
+        # attemp to remove day and time from release date
+        <td><%= movie.release_date.strftime("%B %Y") %></td>
+
         <td>
           <%= link_to 'Show', movie_path(movie) %>
           <%= link_to 'Edit', edit_movie_path(movie) %>
