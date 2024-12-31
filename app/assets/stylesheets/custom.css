@@ -24,7 +24,9 @@ tr:hover {
 }
 
 h1 {
-    color: #333;
+    color: #600000;
+    content: center;
+    text-align: center;
 }
 
 /* table styling end */
@@ -86,20 +88,20 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
-  }
-  
-  .form-container h1 {
+}
+
+.form-container h1 {
     text-align: center;
-  }
+}
   
-  .form-container form {
+.form-container form {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .form-container form .field {
+.form-container form .field {
     margin-bottom: 15px;
-  }
+}
   
   /* new page end */
 
@@ -111,4 +113,14 @@ h1 {
 
 .button-new-movie:hover {
     background-color: #6b5cbf;
+}
+
+/* edit field styling */
+.form-container form .actions {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.form-container form .actions .button {
+    width: 48%;
 }
