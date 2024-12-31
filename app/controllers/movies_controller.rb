@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
           #  there is col and order
     session[:sort] = params[:sort] if params[:sort]
     session[:direction] = params[:direction] if params[:direction]
-
+      
     sort_column = session[:sort] || 'title'
     sort_order = session[:direction] || 'asc'
     @movies = Movie.order("#{sort_column} #{sort_order}")
